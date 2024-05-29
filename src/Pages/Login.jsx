@@ -11,14 +11,14 @@ const Login = () => {
     };
 
     return (
-        <div style={{fontFamily:"'Montserrat', sans-serif ", fontSize: '15px' }}>
-            <h1 className=' text-[24px]'>Welcome Back</h1>
+        <div style={{fontFamily:"'Montserrat', sans-serif ", fontSize: '15px', marginTop: "20px" }}>
+            <h1 className=' text-[24px] font-bold'>Welcome Back</h1>
             <p className='text-[#808080]'>Please Enter your details to Sign in</p>
             <div className='flex flex-col gap-5 m-5 items-center'>
-                <input type='email' placeholder='Email Address' className='border-2 text-black p-2 rounded-md w-72' />
+                <input type='email' placeholder='Email Address' className='border-[1.5px] bg-transparent p-2 rounded-md w-72' />
                 <div className='relative'>
-                    <input type={showPassword ? 'text' : 'password'} placeholder='Password' className='border-2  p-2 rounded-md w-72 text-black' />
-                    <button onClick={togglePasswordVisibility} className='absolute right-2 top-2 text-black'>
+                    <input type={showPassword ? 'text' : 'password'} placeholder='Password' className='border-[1.5px] bg-transparent  p-2 rounded-md w-72 text-black' />
+                    <button onClick={togglePasswordVisibility} className='absolute right-2 top-2'>
                         <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
                     </button>
                 </div>
