@@ -11,7 +11,7 @@ const ConfirmEmail = () => {
         <p className='mb-2'>We sent a confirmation email to</p>
         <p className='font-bold mb-2'>email@gmail.com</p>
         <p className='mb-2'>Check your email and click on <br /> the Confirmation link to continue</p>
-        <p className='font-bold mt-32 text-F]'>Resend email</p>
+        <button className='font-bold mt-32 w-32 h-10  rounded-lg  hover:bg-opacity-20 hover:border-[1.5px]' >Resend email</button>
       </div>
     </div>
   );
