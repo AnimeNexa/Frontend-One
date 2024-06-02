@@ -6,6 +6,8 @@ import Signup from './Pages/Signup';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ConfirmEmail from './Pages/ConfirmEmail';
 import ConnectWallet from './Pages/ConnectWallet';
+import ScanWallet from './Pages/ScanWallet';
+import AddProfile from './Pages/AddProfile';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -31,6 +33,8 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/confirmemail' element={ <ConfirmEmail />} />
           <Route path='/connectwallet' element={<ConnectWallet />} />
+          <Route path='/scanwallet' element={<ScanWallet />} />
+          <Route path='/addprofile' element={<AddProfile />} />
         </Routes>
       </BrowserRouter>
     </div>
