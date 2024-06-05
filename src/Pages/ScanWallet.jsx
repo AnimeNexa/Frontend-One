@@ -29,8 +29,8 @@
 
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
-import '@fontsource/inter'; // Defaults to weight 400.
-import profilepic from '../assets/profilpic.png';
+//import '@fontsource/inter'; // Defaults to weight 400.
+import profilepic from '../assets/Frame88.png';
 
 const MessagePage = () => {
   const suggestedUsers = [
