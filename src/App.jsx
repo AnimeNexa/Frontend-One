@@ -8,8 +8,15 @@ import ConfirmEmail from './Pages/ConfirmEmail';
 import ConnectWallet from './Pages/ConnectWallet';
 import ScanWallet from './Pages/ScanWallet';
 import AddProfile from './Pages/AddProfile';
-// import GroupCreat from './Pages/CreateGroup'
-import MessagePage from './Pages/MessagePage'
+import MessagePage from './Pages/MessagePage';
+import UserMessage from './Pages/UserMessage';
+import ChartSection from "./Pages/ChartSection";
+import ChooseColor from "./Pages/ChooseColor";
+import SelectColor from "./Pages/SelectColor";
+import ProfilePage from "./Pages/ProfilePage";
+import TrandingStory from "./Pages/TrandingStory";
+import NotificationPage from './Pages/Notification';
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -37,7 +44,14 @@ function App() {
           <Route path='/connectwallet' element={<ConnectWallet />} />
           <Route path='/scanwallet' element={<ScanWallet />} />
           <Route path='/addprofile' element={<AddProfile />} />
-          <Route path='/messagepage' elament={<MessagePage />}  />
+          <Route path="/messagepage" element={<MessagePage />} />
+          <Route path="/usermessage" element={<UserMessage/>} />
+          <Route path="/chartsection" element={<ChartSection />} />
+          <Route path="/choosecolor" element={<ChooseColor />} />
+          <Route path="/selectcolor" element={<SelectColor />} />
+          <Route path="/profilepage" element={<ProfilePage />} />
+          <Route path='/trandingstory' element={<TrandingStory />} />
+          <Route path='/notificationpage' element={<NotificationPage />} />
         </Routes>
       </BrowserRouter>
     </div>
