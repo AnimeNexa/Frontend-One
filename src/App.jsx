@@ -15,6 +15,7 @@ import ChooseColor from "./Pages/ChooseColor";
 import SelectColor from "./Pages/SelectColor";
 import ProfilePage from "./Pages/ProfilePage";
 import TrandingStory from "./Pages/TrandingStory";
+import NotificationPage from './Pages/Notification';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
           <Route path="/selectcolor" element={<SelectColor />} />
           <Route path="/profilepage" element={<ProfilePage />} />
           <Route path='/trandingstory' element={<TrandingStory />} />
+          <Route path='/notificationpage' element={<NotificationPage />} />
         </Routes>
       </BrowserRouter>
     </div>
