@@ -1,6 +1,15 @@
 import { FaArrowLeft } from "react-icons/fa";
+import { useState } from 'react';
 
 const SelectColor = () => {
+  const [selectedColor, setSelectedColor] = useState(null);
+
+  const handleColorClick = (color) => {
+    setSelectedColor(color);
+  };
+
+  const colors = ['#FFFFFF', '#BD00FF', '#007737', '#DDB44A', '#FF0000', '#0066FF', '#00A3FF', '#424242'];
+
   return (
     <div className="px-4">
       <div className="flex gap-4 items-center h-[68px]">
@@ -8,14 +17,14 @@ const SelectColor = () => {
         <h4 className="font-roboto-condensed text-[14px]">Select colors</h4>
       </div>
       <div className="grid grid-cols-2 gap-4 mb-[40%]">
-        <div className="bg-[#FFFFFF] w-[134px] h-[112px] p-5"></div>
-        <div className="bg-[#BD00FF] w-[134px] h-[112px]"></div>
-        <div className="bg-[#007737] w-[134px] h-[112px]"></div>
-        <div className="bg-[#DDB44A] w-[134px] h-[112px]"></div>
-        <div className="bg-[#FF0000] w-[134px] h-[112px]"></div>
-        <div className="bg-[#0066FF] w-[134px] h-[112px]"></div>
-        <div className="bg-[#00A3FF] w-[134px] h-[112px]"></div>
-        <div className="bg-[#424242] w-[134px] h-[112px]"></div>
+        {colors.map((color, index) => (
+          <div 
+            key={index}
+            className="w-[134px] h-[112px] p-5"
+            style={{backgroundColor: color}}
+            onClick={() => handleColorClick(color)}
+          ></div>
+        ))}
       </div>
 
       <div className="">

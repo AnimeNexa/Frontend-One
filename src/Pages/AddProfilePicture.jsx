@@ -30,7 +30,7 @@ const AddProfile = () => {
       <p className='text-xl mt-2'>Add a profile picture so your Friends know it’s you.</p>
 
       <input type="file" accept="image/*" onChange={handleFileChange} className='hidden' id="fileUpload" />
-      <label htmlFor="fileUpload" className='bg-transparent hover:bg-[#CCE5FF] text-[#000000] p-2 w-[328px] rounded-md mt-2 text-2xl cursor-pointer'>Add a photo</label>
+      <label htmlFor="fileUpload" className='bg-transparent hover:bg-[#CCE5FF] text-[#000000] p-2 w-[328px] rounded-md mt-2 text-2xl cursor-pointer text-center'>Add a photo</label>
       {selectedFile && <button onClick={handleUpload} className='bg-transparent hover:bg-[#CCE5FF] text-[#000000] p-2 w-[328px] rounded-md mt-2 text-2xl'>Upload</button>}
       <button onClick={handleSkip} className=' p-2 w-[328px] rounded-md text-2xl mt-2'>Skip</button>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowLeft, FaEllipsisV } from "react-icons/fa";
 import meme from "../assets/meme.png";
-
+import {Link} from 'react-router-dom';
 const NotificationPage = () => {
   const Groups = [
     {
@@ -38,20 +38,20 @@ const NotificationPage = () => {
   return (
     <div className="px-4">
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-4">
+        <Link to="/messagepage" className="flex items-center gap-4">
           <FaArrowLeft />
           <span>Notifications</span>
-        </div>
+        </Link>
         <FaEllipsisV />
       </div>
       <h1>Notifications</h1>
       {Groups.map((groupList, index) => (
         <div key={index} className="flex items-center justify-between">
-                                                           <div className="flex items-center gap-4">
-                                                           <img src={groupList.Image} className="w-[48px] h-[48px] rounded-full"/>
-                                                            <h1>{groupList.h1tag}</h1>
-                                                           </div>
-                                                           <span>{groupList.date}</span>
+          <div className="flex items-center gap-4">
+          <img src={groupList.Image} className="w-[48px] h-[48px] rounded-full"/>
+          <h1>{groupList.h1tag}</h1>
+          </div>
+          <span>{groupList.date}</span>
         </div>
       ))}
     </div>

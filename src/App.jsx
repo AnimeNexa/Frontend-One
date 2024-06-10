@@ -7,10 +7,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ConfirmEmail from './Pages/ConfirmEmail';
 import ConnectWallet from './Pages/ConnectWallet';
 import ScanWallet from './Pages/ScanWallet';
-import AddProfile from './Pages/AddProfile';
+import AddProfilePicture from './Pages/AddProfilePicture';
 import MessagePage from './Pages/MessagePage';
 import UserMessage from './Pages/UserMessage';
-import ChartSection from "./Pages/ChartSection";
+import ChatSection from "./Pages/ChatSection";
 import ChooseColor from "./Pages/ChooseColor";
 import SelectColor from "./Pages/SelectColor";
 import ProfilePage from "./Pages/ProfilePage";
@@ -43,10 +43,10 @@ function App() {
           <Route path='/confirmemail' element={ <ConfirmEmail />} />
           <Route path='/connectwallet' element={<ConnectWallet />} />
           <Route path='/scanwallet' element={<ScanWallet />} />
-          <Route path='/addprofile' element={<AddProfile />} />
+          <Route path='/addpicture' element={<AddProfilePicture />} />
           <Route path="/messagepage" element={<MessagePage />} />
           <Route path="/usermessage" element={<UserMessage/>} />
-          <Route path="/chartsection" element={<ChartSection />} />
+          <Route path="/chatsection" element={<ChatSection />} />
           <Route path="/choosecolor" element={<ChooseColor />} />
           <Route path="/selectcolor" element={<SelectColor />} />
           <Route path="/profilepage" element={<ProfilePage />} />

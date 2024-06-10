@@ -10,11 +10,11 @@ const MessagePage = () => {
   const suggestedUsers = [
     {
       image: meme,
-      username: "user1",
+      username: "User 1",
     },
     {
       image: meme,
-      username: "user2",
+      username: "User 2",
     },
   ];
 
@@ -44,9 +44,7 @@ const MessagePage = () => {
       {suggestedUsers.map((user, index) => (
         <div key={index} className="flex items-center gap-2 mt-4">
           {/* <img src={user.meme} width={10} height={10} className="w-[48px] h-[48px] rounded-full" /> */}
-          <img src="image.jpg" al="true" />
-
-
+          <img src={user.image} alt="true" className="rounded-full"/>
           <h1 className="text-[#FFFFFF] text-[14px] font-roboto-condensed">{user.username}</h1>
         </div>
       ))}

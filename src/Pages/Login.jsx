@@ -11,6 +11,7 @@ const Login = () => {
   };
 
   return (
+    <main className='h-[90vh] flex flex-col items-center justify-center'>
     <div
       style={{
         fontFamily: "'Montserrat', sans-serif ",
@@ -18,19 +19,21 @@ const Login = () => {
         marginTop: "20px",
       }}
     >
-      <h1 className=" text-[24px] font-bold">Welcome Back</h1>
-      <p className="text-[#808080]">Please Enter your details to Sign in</p>
+     <div className="text-center">
+     <h1 className=" text-[24px] font-bold">Welcome Back</h1>
+     <p className="text-[#808080]">Please Enter your details to Sign in</p>
+     </div>
       <div className="flex flex-col gap-5 m-5 items-center">
         <input
           type="email"
           placeholder="Email Address"
-          className="border-[1.5px] bg-transparent p-2 rounded-md w-72"
+          className="border-[1.5px] bg-transparent p-2 rounded-md w-72 outline-none"
         />
         <div className="relative">
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
-            className="border-[1.5px] bg-transparent  p-2 rounded-md w-72 text-black"
+            className="border-[1.5px] bg-transparent  p-2 rounded-md w-72 text-black outline-none"
           />
           <button
             onClick={togglePasswordVisibility}
@@ -40,22 +43,23 @@ const Login = () => {
           </button>
         </div>
       </div>
-      <button className="bg-[#CCE5FF] text-[#000000] p-2 w-72 rounded-md">
+      <button className="bg-[#CCE5FF] text-[#000000] p-2 w-72 rounded-md ml-6">
         Sign In
       </button>
-      <p className="text-[#FFFFFF] mt-6">
+      <p className="text-[#FFFFFF] mt-6 text-center">
         Forgot your password?{" "}
         <Link to="/reset" className="text-[#CCE5FF]">
           Reset Password
         </Link>
       </p>
-      <p className="text-[#FFFFFF] mt-24">
+      <p className="text-[#FFFFFF] mt-24 text-center">
         Don&apos;t have an account?{" "}
         <Link to="/signup" className="text-[#CCE5FF]">
           Sign Up
         </Link>
       </p>
     </div>
+  </main>
   );
 };
 

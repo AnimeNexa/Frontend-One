@@ -6,12 +6,12 @@ import memeImg from "../assets/meme.png";
 const UserMessage = () => {
   const Unread = [
     {
-      Image: memeImg,
+      img: memeImg,
       user: "User1",
       unreadMass: "4+ unread messages",
     },
     {
-      Image: memeImg,
+      img: memeImg,
       user: "User1",
       unreadMass: "4+ unread messages",
     },
@@ -35,13 +35,10 @@ const UserMessage = () => {
         <div>
           <span className="text-[15px] font-roboto-condensed">Messages</span>
           {Unread.map((item, index) => (
-            <div className="flex items-center gap-3">
-              <img src={Image}  className="w-[48px] h-[48px] rounded-full" />
+            <div key={index} className="flex items-center gap-3">
+              <img src={item.img}  className="w-[48px] h-[48px] rounded-full" />
 
-              <div
-                key={index}
-                className="grid justify-start items-start gap-1 mb-8 mt-4"
-              >
+              <div className="grid justify-start items-start gap-1 mb-8 mt-4">
                 <h2 className="text-[14px] font-roboto-condensed">
                   {item.user}
                 </h2>

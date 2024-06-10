@@ -45,14 +45,15 @@ const ChartSection = () => {
       </div>
       </div>
 
-      <div className="px-4">
-        <button className="flex justify-between px-4 relative bg-[#CCE5FF] top-[68vh] rounded-xl h-[48px] items-center w-full">
-          <FaCamera className="text-[#000000]"/>
-         <div className="flex gap-2">
-         <FaImage />
-          <FaMicrophone />
-         </div>
-        </button>
+      <div className="flex justify-between px-4 relative bg-[#CCE5FF] top-[68vh] rounded-xl h-[48px] items-center w-full">
+        <FaCamera className="text-[#000000]"/>
+        <div className="flex gap-2">
+        </div>
+        <input type="text" className="w-96 bg-transparent text-black outline-none" />
+            <div className="flex gap-3 text-black">
+            <FaImage />
+            <FaMicrophone />
+            </div>
       </div>
 
     </div>
