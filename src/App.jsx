@@ -16,6 +16,8 @@ import SelectColor from "./Pages/SelectColor";
 import ProfilePage from "./Pages/ProfilePage";
 import TrandingStory from "./Pages/TrandingStory";
 import NotificationPage from './Pages/Notification';
+import TrendingCom from './Pages/TrendingCom';
+import Menu from './Pages/Menu';
 
 
 function App() {
@@ -52,6 +54,8 @@ function App() {
           <Route path="/profilepage" element={<ProfilePage />} />
           <Route path='/trandingstory' element={<TrandingStory />} />
           <Route path='/notificationpage' element={<NotificationPage />} />
+          <Route path='trendingcomm' element={<TrendingCom />} />
+          <Route path='/menu' element={<Menu />} />
         </Routes>
       </BrowserRouter>
     </div>
