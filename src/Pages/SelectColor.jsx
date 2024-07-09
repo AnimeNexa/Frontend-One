@@ -1,5 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { useState } from 'react';
+import Footer from '../Component/Footer';
 
 const SelectColor = () => {
   const [selectedColor, setSelectedColor] = useState(null);
@@ -32,6 +33,7 @@ const SelectColor = () => {
           Set
         </button>
       </div>
+      <Footer />
     </div>
   );
 };

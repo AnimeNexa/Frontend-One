@@ -9,6 +9,7 @@ import meme1 from "../assets/meme1.png";
 import meme3 from "../assets/meme3.png";
 import { FaShareNodes, FaArrowLeft} from "react-icons/fa6";
 import { FaEllipsisV } from "react-icons/fa";
+import Footer from "../Component/Footer";
 
 const ProfilePage = () => {
   const ProfileDetails = [
@@ -22,6 +23,7 @@ const ProfilePage = () => {
   ];
 
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [images, setImages] = useState([null]);
 
   const toggleDropdown = (dropdown) => {
     setOpenDropdown((prev) => (prev === dropdown ? null : dropdown));
@@ -35,6 +37,17 @@ const ProfilePage = () => {
     meme1,
     meme3,
   ];
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        // Append the new image to the existing array
+        setImages((prevImages) => [...prevImages, e.target.result]);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <div className="">
@@ -149,9 +162,13 @@ const ProfilePage = () => {
               Featured
             </button>
             {openDropdown === "second" && (
-              <div className="grid grid-cols-3 gap-4 mt-2">
-                
-              </div>
+               <div className="grid grid-cols-4 ">
+               {images.map((image, index) => (
+                 <div key={index}>
+                   <img src={image}  className="w-[50%] h-[100%]"/>
+                 </div>
+               ))}
+             </div>
             )}
           </div>
 
@@ -169,11 +186,21 @@ const ProfilePage = () => {
             )}
           </div>
         </div>
-          <div className="flex justify-center mb-4 relative">
+        <div className="flex justify-center">
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            style={{ display: 'none' }}
+            id="hiddenFileInput"
+          />
+          <button onClick={() => document.getElementById('hiddenFileInput').click()}>
             <h1 className="bg-[#000000] w-[60px] h-[60px] rounded-full absolute bottom-0 items-center justify-center flex text-[40px]">+</h1>
-          </div>
+          </button>
+         </div>        
           </div>
       </div>
+      <Footer />
     </div>
   );
 };

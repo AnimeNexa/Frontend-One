@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowLeft, FaEllipsisV } from "react-icons/fa";
 import meme from "../assets/meme.png";
 import {Link} from 'react-router-dom';
+import Footer from "../Component/Footer";
 const NotificationPage = () => {
   const Groups = [
     {
@@ -54,6 +55,7 @@ const NotificationPage = () => {
           <span>{groupList.date}</span>
         </div>
       ))}
+      <Footer />
     </div>
   );
 };

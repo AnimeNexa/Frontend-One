@@ -5,6 +5,7 @@ import { FaSliders } from "react-icons/fa6";
 import { FiSearch } from "react-icons/fi";
 import Ellips from '../assets/Ellipse.svg'
 import { FaChevronRight } from "react-icons/fa6";
+import Footer from '../Component/Footer';
 
 const TrendingCom = () => {
   return (
@@ -80,6 +81,7 @@ const TrendingCom = () => {
         </div>
         
       </div>
+      <Footer />
     </div>
       
 

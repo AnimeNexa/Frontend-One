@@ -1,6 +1,8 @@
 import React from "react";
 import { FaArrowLeft, FaPhoneAlt, FaEllipsisV, FaCheck, FaCamera, FaImage, FaMicrophone} from "react-icons/fa";
 import meme from "../assets/meme.png"
+import Footer from "../Component/Footer";
+
 
 const ChartSection = () => {
   return (
@@ -55,7 +57,7 @@ const ChartSection = () => {
             <FaMicrophone />
             </div>
       </div>
-
+      <Footer />
     </div>
   );
 };

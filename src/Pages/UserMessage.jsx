@@ -2,6 +2,7 @@ import React from "react";
 // import {  } from "react-icons/fa";
 import { FaEdit, FaArrowLeft, FaSearch } from "react-icons/fa";
 import memeImg from "../assets/meme.png";
+import Footer from "../Component/Footer";
 
 const UserMessage = () => {
   const Unread = [
@@ -50,6 +51,7 @@ const UserMessage = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
